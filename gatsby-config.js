@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
+    title: `Gatsby MarkovJS`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    author: `MarkovJS`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -15,6 +15,14 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `29fnr4iapyfe`,
+        // Learn about environment variables: https://gatsby.dev/env-vars
+        accessToken: 'FL2_6D4PMTowvLr2Nk6POWjOa-OBuPnGp-mSLC4XRo4',
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
